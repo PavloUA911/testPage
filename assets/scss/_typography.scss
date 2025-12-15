@@ -1,0 +1,254 @@
+html {
+    font-size: 62.5%;
+    font-family: $primary-font;
+
+    @media (min-width: $desktopP1) {
+        font-size: 0.695vw;
+    }
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+a {
+    &:not(.btn) {
+        color: $green-dark;
+    }
+}
+
+h1,
+.h1 {
+    @include adaptiveProperty("font-size", 60, 36);
+    line-height: 1.6;
+    font-weight: 700;
+
+    @media (min-width: $tabletLargeP1) {
+        line-height: 1.3;
+    }
+}
+
+h2,
+.h2 {
+    @include adaptiveProperty("font-size", 48, 32);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h3,
+.h3 {
+    @include adaptiveProperty("font-size", 36, 32);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h4,
+.h4 {
+    @include adaptiveProperty("font-size", 28, 24);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+h5,
+.h5 {
+    @include adaptiveProperty("font-size", 28, 16);
+    line-height: 1.25;
+
+    @media (min-width: $tabletSmallP1) and (max-width: $tabletLarge) {
+        @include adaptiveProperty("font-size", 28, 28);
+    }
+
+    @media (min-width: $tabletSmallP1) {
+        line-height: 1.2;
+    }
+    @media (min-width: $K2Large) {
+        font-size: 1.45vw;
+    }
+}
+
+h6,
+.h6 {
+    @include adaptiveProperty("font-size", 22, 16);
+    line-height: 1.25;
+
+    @media (min-width: $tabletSmallP1) and (max-width: $tabletLarge) {
+        @include adaptiveProperty("font-size", 22, 22);
+    }
+
+    @media (min-width: $tabletSmallP1) {
+        line-height: 1.2;
+    }
+    @media (min-width: $K2Large) {
+        font-size: 1.1vw;
+    }
+}
+
+p,
+.p1 {
+    @include adaptiveProperty("font-size", 20, 18);
+    line-height: 1.6;
+}
+
+.h2-large {
+    @include adaptiveProperty("font-size", 55, 24);
+    line-height: 1.33;
+    font-weight: 700;
+
+    @media (min-width: $tabletSmallP1) and (max-width: $tabletLarge) {
+        @include adaptiveProperty("font-size", 55, 55);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1.2rem;
+
+    @media (min-width: $tabletSmallP1) {
+        margin-top: 3.4rem;
+    }
+
+    @media (min-width: $K2Large) {
+        margin-top: 1.5vw;
+    }
+
+    & + p,
+    & + ul,
+    & + ol {
+        margin-top: 2rem;
+
+        @media (min-width: $K2Large) {
+            margin-top: 1.05vw;
+        }
+    }
+}
+p {
+    & + p {
+        margin-top: 1.2rem;
+
+        @media (min-width: $K2Large) {
+            margin-top: 1.6vw;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p {
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+
+    li {
+        @extend .p1;
+
+        & + li {
+            margin-top: 0.6rem;
+
+            @media (min-width: $desktopP1) {
+                margin-top: 0.65vw;
+            }
+        }
+    }
+}
+
+ul {
+    li {
+        position: relative;
+        padding-left: 1.6rem;
+
+        @media (min-width: $tabletP1) {
+            padding-left: 2rem;
+        }
+
+        @media (min-width: $K2Large) {
+            padding-left: 1.05vw;
+        }
+
+        &:after {
+            content: "";
+            width: 0.6rem;
+            height: 0.6rem;
+            background-color: $green-dark;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0.8rem;
+
+            @media (min-width: $tabletSmallP1) {
+                top: 0.9rem;
+            }
+
+            @media (min-width: $deskLargeP1) {
+                top: 1rem;
+            }
+
+            @media (min-width: $K2Large) {
+                top: 0.5vw;
+                width: 0.3vw;
+                height: 0.3vw;
+            }
+        }
+    }
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 1.6rem;
+
+    @media (min-width: $tabletP1) {
+        margin-left: 2rem;
+    }
+
+    @media (min-width: $K2Large) {
+        margin-left: 1.05vw;
+    }
+}
+
+.reset-list {
+    list-style-type: none;
+    padding: unset;
+    margin: unset;
+
+    li {
+        padding: unset;
+        margin: unset;
+        line-height: 1;
+
+        &:after {
+            display: none;
+            width: unset;
+            height: unset;
+            position: unset;
+            top: unset;
+            left: unset;
+            background-color: unset;
+        }
+    }
+}

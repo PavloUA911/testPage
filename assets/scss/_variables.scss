@@ -1,0 +1,50 @@
+// container
+$containerPaddingS: 1.6rem;
+$containerPaddingM: 3rem;
+$containerPadding: 6.4rem;
+$containerPaddingXL: 8rem;
+
+// Sizing
+$containerMaxWidth: 1440;
+$K2Large: 1921px;
+$deskXLarge: 1920px;
+$deskXLargeP1: calc($deskXLarge / 1px) + 1px;
+$deskLarge: 1599px;
+$deskLargeP1: calc($deskLarge / 1px) + 1px;
+$desktop: 1440px;
+$desktopP1: calc($desktop / 1px) + 1px;
+$tableDesktop: 1140px;
+$tabletLarge: 1280px;
+$tabletLargeP1: calc($tabletLarge / 1px) + 1px;
+$tablet: 1024px; // @media (max-width: $tablet) --> 1024px and smaller
+$tabletP1: calc($tablet / 1px) + 1px; // @media (min-width: $tabletP1) --> 1025px and bigger
+$tabletSmall: 767px;
+$tabletSmallP1: calc($tabletSmall / 1px) + 1px;
+$mobile: 575px;
+$mobileP1: calc($mobile / 1px) + 1px;
+$mobileSmall: 370px;
+$mobileSmallP1: calc($mobileSmall / 1px) + 1px;
+
+// Adaptive Property Sizing
+$adaptivePropertyMaxViewport: $containerMaxWidth;
+$adaptivePropertyMinViewport: 390;
+
+// Colors
+
+// base
+$white: #ffffff;
+$black: #000000;
+$transparent: rgba(0, 0, 0, 0);
+
+$green-dark: #032817;
+$green-light: #edfff7;
+$green-soft: #ecf7ee;
+
+$green-primary: #006034;
+$green-muted: #498067;
+
+$green-deep: #01522d;
+$green-icon: #498167;
+// Fonts
+$primary-font: "IBM Plex Sans", sans-serif;
+$secondary-font: "Roboto", sans-serif;

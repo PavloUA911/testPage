@@ -1,0 +1,62 @@
+.btn {
+    cursor: pointer;
+    outline: none;
+    width: fit-content;
+    min-height: 5rem;
+    height: 5.6rem;
+    min-width: 18.6rem;
+    text-align: center;
+    padding: 1.6rem 3.2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: $white;
+    border-radius: 5rem;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.2s all;
+    white-space: nowrap;
+    font-family: $secondary-font;
+    transition: 0.2s all;
+
+    //.btn--green-gradient
+
+    &--green-gradient {
+        background: linear-gradient(90deg, #014f2b 0%, #01522d 100%);
+        transition: 0.2s all;
+        &:hover {
+            color: #23e088;
+            transition: 0.2s all;
+        }
+    }
+
+    //.btn--white
+
+    &--white {
+        background-color: $green-light;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        color: $green-dark;
+        transition: 0.2s all;
+
+        &:hover {
+            background: #1fc578;
+            transition: 0.2s all;
+            color: $white;
+        }
+    }
+
+    //.btn--green
+    &--green {
+        background-color: $green-deep;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            background-color: #1fc578;
+            transition: 0.2s all;
+        }
+    }
+}

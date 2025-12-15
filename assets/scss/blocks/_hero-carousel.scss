@@ -1,0 +1,248 @@
+.hero-carousel {
+    padding-top: 2.6rem;
+    padding-bottom: 2.4rem;
+    overflow: hidden;
+    position: relative;
+    background-color: $green-dark;
+    @media (min-width: $tabletP1) {
+        padding-top: 11.7rem;
+        padding-bottom: 3rem;
+    }
+    // .hero-carousel__circle
+
+    &__circle {
+        position: absolute;
+
+        left: 0;
+        width: 80%;
+        height: 80%;
+        filter: blur(1rem);
+        left: 50%;
+        transform: translateX(-50%);
+        @media (min-width: $tabletSmallP1) {
+            width: 100%;
+            height: 100%;
+            top: -1.2rem;
+            max-width: 62.2rem;
+            max-height: 62.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            filter: blur(127.232px);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .hero-carousel__top-vector
+
+    &__top-vector {
+        display: none;
+        position: absolute;
+
+        width: 15.9rem;
+        height: 10.8rem;
+        bottom: 2.8rem;
+        @media (min-width: $tabletSmallP1) {
+            right: 3.5rem;
+            top: 3.8rem;
+            display: block;
+        }
+        @media (min-width: $tabletP1) {
+            top: 14.8rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .hero-carousel__bottom-vector
+
+    &__bottom-vector {
+        position: absolute;
+        left: 0.8rem;
+        width: 15.9rem;
+        height: 10.8rem;
+        bottom: 2.8rem;
+        @media (min-width: $tabletSmallP1) {
+            left: 15.6rem;
+            bottom: 2.1rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .hero-carousel__container
+
+    &__container {
+        overflow: hidden;
+    }
+
+    // .hero-carousel__track
+
+    &__track {
+        display: flex;
+        width: 100%;
+        transition: transform 0.2s all;
+    }
+
+    // .hero-carousel__slide
+
+    &__slide {
+        min-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    // .hero-carousel__images
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.3rem;
+        padding: 0 2.54rem;
+        max-width: 51.3rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+        @media (min-width: $tabletP1) {
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    // .hero-carousel__img
+
+    &__img {
+        background: #ffffff;
+        box-shadow: 0px 2.40385px 4.80769px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: $tabletP1) {
+            padding: 1.3rem;
+            border-radius: 1.6rem;
+        }
+        &:first-child {
+            img {
+                max-width: 10.5rem;
+                max-height: 3.6rem;
+                @media (min-width: $tabletP1) {
+                    max-width: 19.2rem;
+                    max-height: 6.6rem;
+                }
+            }
+        }
+        &:last-child {
+            img {
+                max-width: 13.5rem;
+                max-height: 2.3rem;
+                @media (min-width: $tabletP1) {
+                    max-width: 22.3rem;
+                    max-height: 3.8rem;
+                }
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    // .hero-carousel__title
+
+    &__title {
+        margin-top: 2rem;
+        @media (min-width: $tabletP1) {
+            margin-top: 2.2rem;
+        }
+        h1,
+        h2 {
+            text-align: center;
+            font-size: 4rem;
+            line-height: 1.24;
+            color: $green-light;
+            width: 80%;
+            margin: 0 auto;
+            @media (min-width: $tabletP1) {
+                font-size: 4.8rem;
+                line-height: 1.4;
+            }
+        }
+        p {
+            margin-top: 1.2rem;
+            font-size: 2rem;
+            line-height: 1.5;
+            color: $green-light;
+            @media (min-width: $tabletP1) {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    // .hero-carousel__dots
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 5.6rem;
+        padding: 0;
+        list-style: none;
+        gap: 0.8rem;
+        position: relative;
+        z-index: 4;
+        @media (min-width: $tabletP1) {
+            margin-top: 7.2rem;
+        }
+    }
+
+    // .hero-carousel__dot
+
+    &__dot {
+        background-color: $white;
+
+        cursor: pointer;
+        width: 3rem;
+        height: 0.9rem;
+        border-radius: 1.6rem;
+        margin: 0;
+        padding: 0;
+        opacity: 0.2;
+        &:after {
+            display: none;
+        }
+        .is-active {
+            opacity: 1;
+        }
+    }
+    .btn {
+        margin: 4rem auto 0 auto;
+        @media (min-width: $tabletP1) {
+            margin-top: 3.2rem;
+        }
+    }
+}
+.hero-carousel__dot.is-active {
+    opacity: 1;
+}
+.container {
+}
+.btn {
+}
+.btn--white {
+}
+.is-active {
+}

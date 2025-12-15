@@ -1,0 +1,208 @@
+.contact-us {
+    background-color: #032817;
+    margin-top: 4rem;
+    padding-block: 3.2rem;
+    margin-bottom: 4rem;
+
+    @media (min-width: $tabletSmallP1) {
+        margin-bottom: 3.8rem;
+        background-color: unset;
+    }
+
+    // .contact-us__container
+
+    &__container {
+        @media (min-width: $tabletSmallP1) {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4rem;
+            overflow: hidden;
+        }
+    }
+
+    // .contact-us__circle-large
+
+    &__circle-large {
+        display: none;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: inherit;
+        }
+        @media (min-width: $tabletSmallP1) {
+            position: absolute;
+            display: block;
+        }
+        @media (min-width: $tabletLargeP1) {
+            width: 50.1rem;
+            height: 41.4rem;
+            top: 0rem;
+            left: 13.5rem;
+            transform: scale(1.5);
+        }
+    }
+
+    // .contact-us__circle-small
+
+    &__circle-small {
+        display: none;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (min-width: $tabletSmallP1) {
+            position: absolute;
+            display: block;
+            right: 0;
+            bottom: 0;
+            max-width: 39rem;
+            max-height: 39rem;
+            transform: scale(1.2);
+        }
+    }
+
+    // .contact-us__vector
+
+    &__vector {
+        display: none;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (min-width: $tabletSmallP1) {
+            position: absolute;
+            display: block;
+            left: 3rem;
+            width: 37%;
+            bottom: 3rem;
+            max-width: 30.3rem;
+            z-index: 1;
+        }
+        @media (min-width: $tabletLargeP1) {
+            left: 7.2rem;
+            bottom: 6.5rem;
+        }
+    }
+
+    // .contact-us__inner
+
+    &__inner {
+        @media (min-width: $tabletSmallP1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 4rem;
+            padding: 3rem;
+            background-color: #032817;
+        }
+        @media (min-width: $tabletLargeP1) {
+            padding: 4.8rem 7.2rem;
+        }
+    }
+
+    // .contact-us__text
+
+    &__text {
+        @media (min-width: $tabletSmallP1) {
+            width: 50%;
+            max-width: 46.9rem;
+            margin-top: 2.4rem;
+            position: relative;
+            z-index: 2;
+        }
+        @media (min-width: $tabletP1) {
+            margin-top: 2.8rem;
+        }
+        @media (min-width: $tabletLargeP1) {
+            margin-top: 5.2rem;
+        }
+        p {
+            color: $white;
+            font-weight: 700;
+            font-size: 2.6rem;
+            line-height: 1.35;
+            text-align: center;
+            @media (min-width: $tabletSmallP1) {
+                text-align: left;
+            }
+            @media (min-width: $tabletP1) {
+                font-size: 3rem;
+            }
+            @media (min-width: $tabletLargeP1) {
+                font-size: 3.6rem;
+            }
+        }
+    }
+
+    // .contact-us__form
+
+    &__form {
+        margin-top: 6.3rem;
+        padding: 2.4rem 1.6rem;
+        background-color: $white;
+        box-sizing: border-box;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        h2 {
+            font-size: 2.6rem;
+            line-height: 1.35;
+            color: $green-deep;
+            @media (min-width: $tabletP1) {
+                font-size: 3rem;
+            }
+            @media (min-width: $tabletLargeP1) {
+                font-size: 3.6rem;
+            }
+        }
+        @media (min-width: $tabletSmallP1) {
+            margin-top: 0;
+            width: 50%;
+            max-width: 48.3rem;
+            position: relative;
+            z-index: 2;
+        }
+        @media (min-width: $tabletP1) {
+            padding: 2.8rem 3.6rem;
+        }
+    }
+
+    // .contact-us__field
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        label {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            font-family: $secondary-font;
+            color: $black;
+            @media (min-width: $tabletP1) {
+                line-height: 1.75;
+            }
+        }
+        input {
+            box-sizing: border-box;
+            padding: 1.4rem 1.2rem;
+            background: #ffffff;
+            border: 0.1rem solid rgba(1, 82, 45, 0.19);
+            border-radius: 1rem;
+            font-size: 1.8rem;
+            max-height: 4.8rem;
+        }
+    }
+
+    // .contact-us__submit
+
+    &__submit {
+        width: 100%;
+    }
+}
+.container {
+}
